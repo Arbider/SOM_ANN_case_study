@@ -17,8 +17,8 @@ provided students like me.
 import numpy as np  
 import pandas as pd 
 
-# Importing the dataset (* This dataset is course provided material and represents customers to a bank that have or have not been approved for the obtention of a credit card)
-dataset = pd.read_csv('Credit_Card_Applications.csv') # The splitting of the data into X and y has nothing to do with supervised learning and testing the accuracy of the model, but rather we will just use the values stored in X and the values stored in y will be used to distinguish the approved/non-approved customers.
+# Importing the dataset (* This dataset is course-provided material and represents customers to a bank that have or have not been approved for a credit card)
+dataset = pd.read_csv('Credit_Card_Applications.csv') # The splitting of the data into X and y has nothing to do with supervised learning and testing the accuracy of the model, but rather we will just use the values stored in X and y to distinguish the approved/non-approved customers.
 X = dataset.iloc[:, :-1].values # We take all the rows, and all the columns except the last one.
 y = dataset.iloc[:, -1].values # And here we take all the rows, but only take the last column representing the approval or not of customers (Class column).
 
