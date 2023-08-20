@@ -40,11 +40,11 @@ bone()
 pcolor(som.distance_map().T)
 colorbar()
 markers = ['o', 's'] # o will generate a circle shape, and s will generate a square. 
-colors = ['r','g'] # r will generate the colour red, and g will generate the colour green. Red circles stand for non-approvals and green squares stand for approvals.
-# Below, the i variable will take on the values of the indexes of the customers and x will take on all the vectors of the customers'info at each iteration.
+colors = ['r', 'g'] # r will generate the colour red, and g will generate the colour green. Red circles stand for non-approvals and green squares stand for approvals.
+# Below, the i variable will take on the values of the indexes of the customers and x will take on all the vectors of the customers' info at each iteration.
 for i, x in enumerate(X):
     w = som.winner(x) # Here, 'winner' is the computer for the coordinates of the winning neurons that stand out from the samples from x.   
-    # Here we determine which shape (o or s) and colour (r or g) the customer has based off the index of customer y[i]. The y values, depending on which customer index is iterated, represent a boolean value (in Class column) of either 0 or 1 that indicate credit card approval or not and with that value, the index of either 0 or 1 in the markers/color list is associated to that customer.
+    # Here we determine which shape (o or s) and colour (r or g) the customer has based on the index of customer y[i]. The y values represent a Boolean value (in the Class column) of either 0 or 1 that indicates credit card approval or not, thus you obtain that value associated with the customer at index i in y. Finally, the markers/color list element is chosen accordingly as a red circle for rejected cases and green squares for accepted ones.
     plot(w[0] + 0.5,
          w[1] + 0.5,
          markers[y[i]],
@@ -56,9 +56,11 @@ for i, x in enumerate(X):
 show()
 
 """
-Run all the above lines up to this point in the interactive window if using an IDE like VSCode to determine
-which coordinates you wish to input as the mappings in the following lines of code. Since the SOM makes different 
-groupings everytime the program is run, the above process has to also be repeated everytime.
+Run all the above lines up to this point in the interactive 
+window if using an IDE like VSCode to determine which coordinates 
+you wish to input as the mappings in the following lines of code. 
+Since the SOM makes different groupings every time the program is run, 
+the above process has to also be repeated every time.
 """
 
 # Finding the frauds
