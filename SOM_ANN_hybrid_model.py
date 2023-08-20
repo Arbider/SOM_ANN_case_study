@@ -131,7 +131,7 @@ y_pred = ann.predict(customers) # Now the ANN is making decisions based off the 
 y_pred = np.concatenate((dataset.iloc[:, 0:1].values, y_pred), axis = 1) # The following will provide a ranking for the most likely fraudulent customers to the least likely.
 y_pred = y_pred[y_pred[:, 1].argsort()] # Here the columns are both sorted in according to the ascending order of column at index 1.
 # For more human readable results, multiply the entire column[1] results in y_pred by 100.
-print('These are the percentages of probabilities in ascending order of each customer\'s likelyhood of them actively committing fraud:')
+print('These are the percentages of probabilities in ascending order of each customer\'s likelihood of them actively committing fraud:')
 for i in range(len(y_pred)):
     y_pred[i, 1] = format(y_pred[i, 1] * 100, '.2f')
     print(y_pred[i, 1], '%') 
