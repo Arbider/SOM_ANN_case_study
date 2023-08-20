@@ -119,7 +119,7 @@ ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
 ann.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 # Training the ANN on the Training set.
-ann.fit(customers, is_fraud, batch_size = 1, epochs = 10) # This is where the dependant variable is used to train the model on its relations with the gross data. On this small of a dataset, you would not require mmany more epochs than here for accurate results.
+ann.fit(customers, is_fraud, batch_size = 1, epochs = 10) # This is where the dependent variable is used to train the model on its relations with the gross data. On this small of a dataset, you would not require mmany more epochs than here for accurate results.
 
 
 
