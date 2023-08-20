@@ -137,7 +137,7 @@ for i in range(len(y_pred)):
     print(y_pred[i, 1], '%') 
 
 """ 
-Make a confusion matrix comparing the predicted fraunch customers and the Class Column from the dataset containing 1s and 0s, 
+Make a confusion matrix comparing the predicted fraudulent customers and the Class Column from the dataset containing 1s and 0s, 
 1 being a customer approved for a credit card and 0 being non-approved customers. With the matrix, we can observe the hypothetical
 current effectiveness of the bank at processing their customers. Here we'll compare the results observed as distant from the norm 
 in the SOM stored in the is_fraud variable and the Class column from the dataset now stored in the approvals variable.
